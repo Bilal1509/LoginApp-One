@@ -6,9 +6,9 @@
     <%-include('./partials/nav.ejs')%>
 
     <div class="details content">
-        <h2><%= user.username %></h2>
+        <h2><%=user.username %></h2>
         <div class="content">
-            <p><%= user.password%></p>
+            <p><%=user.password%></p>
         </div>
         <a class="delete" data-doc="<%= user._id %>" href="">delete</a>
     </div>
@@ -25,7 +25,7 @@
             })
             //the ajax request gets send her to .then
             .then((response) => response.json())
-            .then((data)=> console.log(data) )
+            .then((data)=> window.location.href = data.redirect)
             .catch(err => console.log(err));
         })
     </script>
