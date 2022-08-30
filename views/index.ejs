@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include('./partials/head.ejs')%>
+<body>
+    <h1>Home Page</h1>
+    <%-include('./partials/nav.ejs')%>
+
+    <form action="/" method="POST">
+        <label for="name">Name</label>
+        <input type="text" name="username" id="userName"><br>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="userPass"><br><br>
+        <button type="submit">Logup</button>
+    </form>
+    
+    <%-include('./partials/footer.ejs')%>
+</body>
+</html>
